@@ -5,7 +5,6 @@ import os
 
 class Database():
     DATABASE_PATH = 'data/'
-    list = []
 
     def __init__(self, file_name):
         self.file = os.path.abspath(self.DATABASE_PATH + file_name)
@@ -15,9 +14,8 @@ class Database():
         self.file = Helper.open_file(self.file)
 
         if None != self.file:
-            self.list = Helper.fill_list(self.file, self.type)
-
-        return self.list
+            return Helper.fill_list(self.file, self.type)
+        return None
 
     def close_connection(self):
         if not None == self.file:
