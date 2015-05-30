@@ -1,0 +1,3 @@
+Asier Gonzalez,1,0,True
+Mary Desmond,2,9,True
+Andres Avila,2,3,False
